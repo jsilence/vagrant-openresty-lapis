@@ -1,0 +1,21 @@
+
+;; Moonscript mode - https://github.com/k2052/moonscript-mode
+(add-to-list 'load-path "~/.emacs.d/vendor/moonscript-mode")
+(require 'moonscript-mode)
+(require 'moonscriptrepl-mode)
+
+
+;; Coffeescript mode - http://ozmm.org/posts/coffee_mode.html
+(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
+(require 'coffee-mode)
+
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
+
+(setq default-tab-width 2);
+
+;; scss mode 
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/scss-mode"))
+(autoload 'scss-mode "scss-mode")
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+(setq scss-compile-at-save nil) ;; tup does that for us

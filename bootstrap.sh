@@ -13,7 +13,16 @@ fi
 
 # General stuff that is needed. Feel free to omit emacs and to include your favourite editor.
 #apt-get update
-apt-get install -y libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl make unzip git emacs24-nox
+apt-get install -y libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl make unzip git
+
+# an editor. feel free to use your favourite
+apt-get install emacs24-nox
+cp /vagrant/dot-emacs ~/.emacs
+mkdir .emacs.d/vendor
+cd .emacs.d/vendor
+git clone git://github.com/defunkt/coffee-mode.git
+git clone https://github.com/k2052/moonscript-mode.git
+git clone https://github.com/antonj/scss-mode.git
 
 
 # Database access with Postgresql needs to be installed before building openresty
