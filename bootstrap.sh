@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-OPENRESTY=ngx_openresty-1.5.12.1
+OPENRESTY=ngx_openresty-1.7.0.1
 LUAROCKS=luarocks-2.1.2
 
 if ! grep -Fxq 'Europe/Berlin' /etc/timezone
@@ -12,7 +12,7 @@ fi
 
 
 # General stuff that is needed. Feel free to omit emacs and to include your favourite editor.
-#apt-get update
+apt-get update
 apt-get install -y libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl make unzip git
 
 # an editor. feel free to use your favourite
